@@ -1,0 +1,16 @@
+.icons{
+    color: var(--color-primary);
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: auto;
+    display: inline-block;
+  }
+  .icons span{
+    margin: 10px;
+  }
+  .icons span:hover{
+    cursor: pointer;
+    transition: 0.3s ease-in;
+  }

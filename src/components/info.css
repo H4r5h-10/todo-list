@@ -1,0 +1,57 @@
+.inf{
+    display: inline-block;
+}
+.cat-icon{
+    display: inline;
+    margin-right: 5px;
+}
+.title{
+    margin: 20px 100px 20px -50px;
+    font-weight: 400;
+}
+.produc{
+    margin-left: 5rem;
+}
+.black{
+    background-image: linear-gradient(to bottom right, #E0B0FF,#191825);
+    border: 1px solid white;
+}
+.color{
+    background-image: linear-gradient(to bottom right, #FFFAF4,#D25380);
+}
+.theme-box{
+    text-align: left;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+}
+.produc-deet{
+    text-align: left;
+}
+.user{
+    text-align: left;
+}
+img{
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+hr{
+    color: var(--color-primary);
+    border-width: 10px;
+}
+.tasks{
+    position: relative;
+    text-align: left;
+    margin-left: 5rem;
+}
+input{
+    display: inline-block;
+}
+.info-input{
+    margin-bottom: 2rem;
+}
+.text
+{
+    position: relative;
+    bottom: 10px;
+}
+

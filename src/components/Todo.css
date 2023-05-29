@@ -1,0 +1,59 @@
+.taskBg 
+{
+  text-align: left;
+  background-color: var(--color-secondary);
+  padding: 18px 15px;
+  position: relative;
+  margin: 20px auto;
+  border: 6px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.work{
+  height: 20px;
+  width: 20px;
+  background-color: var(--color-work);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.personal{
+  height: 20px;
+  width: 20px;
+  background-color: var(--color-personal);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.leisure{
+  height: 20px;
+  width: 20px;
+  background-color: var(--color-leisure);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.taskBg .taskNumber{
+  display: flex;
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 26px;
+  height: 26px;
+  margin-right: 14px;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskBg div
+{
+  display: flex;
+  align-items: center;
+}
+.taskText{
+  width: 30rem;
+}
+.taskBg .done .taskText 
+{
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+
+
