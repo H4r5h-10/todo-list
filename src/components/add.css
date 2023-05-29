@@ -1,0 +1,44 @@
+.butn{
+    background-color: var(--color-secondary);
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    margin: 5px;
+    border: none;
+}
+.buttons{
+    display: inline;
+    margin: 0;
+}
+.input-field{
+    display: inline;
+}
+.add-input{
+    display: inline;
+    border: none;
+    outline: none;
+    width: 80vh;
+    background-color: var(--color-secondary);
+    color: var(--color-text-area);
+}
+
+.red{
+    background-color: var(--color-work);
+}
+.blue{
+    background-color: var(--color-personal);
+}
+.yellow{
+    background-color: var(--color-leisure);
+}
+.adding{
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 1.2rem;
+    border-radius: 2rem;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
