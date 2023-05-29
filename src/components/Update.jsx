@@ -26,7 +26,7 @@ const Update = (props) => {
         </div>
         <div>
           <input
-            className="input-field"
+            className="add-input"
             value={props.updateTask && props.updateTask.title}
             onChange={(e) => props.changeTask(e)}
           />

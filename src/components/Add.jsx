@@ -12,6 +12,7 @@ const Add = (props) => {
         </div>
         <div className='input-field'>
           <input 
+          className='add-input'
           placeholder= "What is your next task?"
           value={props.newTask} 
           onChange = { (e) => props.setNewTask(e.target.value) }

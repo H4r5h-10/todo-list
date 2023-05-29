@@ -13,8 +13,7 @@
 .input-field{
     display: inline;
 }
-input{
-    /* border: none; */
+.add-input{
     display: inline;
     border: none;
     outline: none;

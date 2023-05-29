@@ -1,23 +1,35 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./info.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineStyle } from "react-icons/md";
 
+
 const Info = () => {
-  const [theme, setTheme] = useState("light")
+  const th = localStorage.getItem('theme')?localStorage.getItem('theme'):"light";
+  const [theme, setTheme] = useState(th);
+  const [name, setName] = useState("");
 
-  const toggleThemeDark = () =>
-  {
-    if(theme !== "dark") setTheme("dark");
+  const toggleThemeDark = () => {
+    if (theme === "light" || theme === "colored") setTheme("dark");
     else setTheme("light");
-  }
-  const toggleThemeColored = () =>
-  {
-    if(theme !== "colored") setTheme("colored");
+  };
+  const toggleThemeColored = () => {
+    if (theme === "light" || theme === "dark") setTheme("colored");
     else setTheme("light");
-  }
+  };
+  const handleKeyDown = (event) => {
+    if(event.key === 'Enter')
+    {
+      setName(name);
+      localStorage.setItem("name", name);
+    }
+  };
 
-  useEffect(()=>{document.body.className=theme},[theme])
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.body.className = theme;
+    
+  }, [theme]);
 
   return (
     <div className="info">
@@ -28,7 +40,18 @@ const Info = () => {
           height="80px"
           width="80px"
         />
-        <span>Welcome User</span>
+        <span>
+          {!localStorage.getItem("name")?
+            <input
+              className="input-info"
+              placeholder="Enter your Name:"
+              type="text"
+              onKeyDown ={handleKeyDown}
+              onChange={(e) => setName(e.target.value)}
+              tabIndex='0'
+            />
+          :"Welcome " + localStorage.getItem('name')}
+        </span>
       </div>
       <hr />
       <div className="title">
@@ -52,11 +75,12 @@ const Info = () => {
         </div>
       </div>
       <div className="theme-box">
-      <span><MdOutlineStyle/>     Themes: </span>
-      <button onClick={toggleThemeDark} className="black butn"></button>
-      <button onClick={toggleThemeColored} className="color butn"></button>
+        <span>
+          <MdOutlineStyle /> Themes:{" "}
+        </span>
+        <button onClick={toggleThemeDark} className="black butn"></button>
+        <button onClick={toggleThemeColored} className="color butn"></button>
       </div>
-
     </div>
   );
 };

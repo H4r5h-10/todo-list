@@ -86,7 +86,7 @@ z-index: -1;
 }
 .info{
   flex: 1;
-  height: 37.6rem;
+  height: 98vh;
   background-color: var(--color-secondary);
   padding: 20px;
   color: var(--color-text-info);

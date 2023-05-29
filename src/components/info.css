@@ -5,6 +5,14 @@
     display: inline;
     margin-right: 5px;
 }
+.input-info{
+    background-color: var(--color-secondary);
+    border: none;
+    margin-left: 5rem;
+}
+.input-info:active{
+    border: none;
+}
 .title{
     margin: 20px 100px 20px -50px;
     font-weight: 400;
@@ -14,7 +22,6 @@
 }
 .black{
     background-image: linear-gradient(to bottom right, #E0B0FF,#191825);
-    border: 1px solid white;
 }
 .color{
     background-image: linear-gradient(to bottom right, #FFFAF4,#D25380);

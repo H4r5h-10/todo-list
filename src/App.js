@@ -14,15 +14,18 @@ function App() {
   const [updateTask, setUpdateTask] = useState("");
 
 
-
   // adds a task to the todo array
-
   useEffect(() => {
     const toDo = JSON.parse(localStorage.getItem('toDo'));
     if (toDo) {
       setTodo(toDo);
     }
   }, []);
+
+  useEffect(() => {
+    const temp = localStorage.getItem('theme');
+    document.body.className = temp===""?"light":temp;
+  }, [])
 
   const addTaskWork = () => {
     if (newTask) {
@@ -103,7 +106,7 @@ function App() {
       <span className="circle1"></span>
       <span className="circle2"></span>
       <span className="circle3"></span>
-      <Info />
+      <Info/>
       {/* Updating a task field*/}
       <div className="area">
         <h1 className="area-heading">Today's Tasks</h1>
